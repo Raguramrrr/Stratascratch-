@@ -1,0 +1,2 @@
+# Stratascratch-
+SQL Practice Question
