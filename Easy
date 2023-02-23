@@ -1,1 +1,13 @@
 Salaries Differences
+select
+(select max(salary)
+from db_employee as e
+left join db_dept as d
+on d.id = e.department_id
+where d.department = 'marketing')
+-
+(select max(salary)
+from db_employee as e
+left join db_dept as d
+on d.id = e.department_id
+where d.department = 'engineering') as salary_difference
