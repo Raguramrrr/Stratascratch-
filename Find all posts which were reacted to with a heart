@@ -1,0 +1,6 @@
+select fr.post_id, fr.poster, fp.post_text, fp.post_keywords, fp.post_date
+from facebook_reactions as fr
+left join facebook_posts as fp
+on fr.post_id = fp.post_id
+where fr.reaction = 'heart'
+limit 1
